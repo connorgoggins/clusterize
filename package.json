@@ -1,0 +1,17 @@
+{
+  "name": "cluster-visualization",
+  "version": "1.0.0",
+  "description": "Documents:  Read the \"html/docs.html\"",
+  "keywords": [],
+  "author": "Connor Goggins",
+  "license": "UNLICENSED",
+  "devDependencies": {},
+  "main": "server.js",
+  "dependencies": {
+    "csv": "^2.0.0",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "python-shell": "^0.5.0"
+  }
+}

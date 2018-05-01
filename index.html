@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<div>
+  Stopwords:<br>
+  <div id="stopwords"></div>
+</div>
+<form action="/add_stopword">
+  <input type="text" name="new_word"><input type="submit" value="Add Stopword" onclick="get_stopwords;"><br>
+</form>
+<form action="/remove_stopword">
+  <input type="text" name="removed_word"><input type="submit" value="Remove Stopword" onclick="get_stopwords;"><br>
+</form>
+<div>
+  Clusters:<br>
+  Cluster 0: <div id="cluster0"></div><br>
+  Examples:<div id="example0"></div><br>
+  Cluster 1: <div id="cluster1"></div><br>
+  Examples:<div id="example1"></div><br>
+  Cluster 2: <div id="cluster2"></div><br>
+  Examples:<div id="example2"></div><br>
+  Cluster 3: <div id="cluster3"></div><br>
+  Examples:<div id="example3"></div><br>
+  Cluster 4: <div id="cluster4"></div><br>
+  Examples:<div id="example4"></div><br>
+  Cluster 5: <div id="cluster5"></div><br>
+  Examples:<div id="example5"></div><br>
+  Cluster 6: <div id="cluster6"></div><br>
+  Examples:<div id="example6"></div><br>
+  Cluster 7: <div id="cluster7"></div><br>
+  Examples:<div id="example7"></div><br>
+  Cluster 8: <div id="cluster8"></div><br>
+  Examples:<div id="example8"></div><br>
+  Cluster 9: <div id="cluster9"></div><br>
+  Examples:<div id="example9"></div><br>
+</div>
+<script>
+var get_stopwords = function () {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var my_json = JSON.parse(this.responseText)
+      document.getElementById("stopwords").innerHTML = my_json.stopwords;
+    }
+  };
+  xhttp.open("GET", "/get_stopwords", true);
+  xhttp.send();
+}
+
+var run_script = function () {
+  var xhttp1 = new XMLHttpRequest();
+  xhttp1.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var my_json = JSON.parse(this.responseText)
+      document.getElementById("cluster0").innerHTML = my_json.cluster0;
+      document.getElementById("cluster1").innerHTML = my_json.cluster1;
+      document.getElementById("cluster2").innerHTML = my_json.cluster2;
+      document.getElementById("cluster3").innerHTML = my_json.cluster3;
+      document.getElementById("cluster4").innerHTML = my_json.cluster4;
+      document.getElementById("cluster5").innerHTML = my_json.cluster5;
+      document.getElementById("cluster6").innerHTML = my_json.cluster6;
+      document.getElementById("cluster7").innerHTML = my_json.cluster7;
+      document.getElementById("cluster8").innerHTML = my_json.cluster8;
+      document.getElementById("cluster9").innerHTML = my_json.cluster9;
+      document.getElementById("example0").innerHTML = my_json.example0;
+      document.getElementById("example1").innerHTML = my_json.example1;
+      document.getElementById("example2").innerHTML = my_json.example2;
+      document.getElementById("example3").innerHTML = my_json.example3;
+      document.getElementById("example4").innerHTML = my_json.example4;
+      document.getElementById("example5").innerHTML = my_json.example5;
+      document.getElementById("example6").innerHTML = my_json.example6;
+      document.getElementById("example7").innerHTML = my_json.example7;
+      document.getElementById("example8").innerHTML = my_json.example8;
+      document.getElementById("example9").innerHTML = my_json.example9;
+    }
+  };
+  xhttp1.open("GET", "/run_script", true);
+  xhttp1.send();
+}
+
+get_stopwords();
+run_script();
+
+document.getElementById("")
+
+
+</script>
