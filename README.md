@@ -9,7 +9,8 @@ with this program, written in JavaScript and backed by a Node server. In the GUI
 clusters will be listed in order of smallest distance to the respective centroid.
 Each cluster entry will include the cluster's associated stems, an example, and the
 distance to the cluster's centroid, with overlap between the stems and the example
-highlighted in blue.
+highlighted in blue. The GUI also supports adding and removing stopwords for the
+purpose of forming more meaningful clusters.
 
 ## Getting Started
 ### Python
