@@ -46,4 +46,4 @@ project directory and run:
     node server.js
 
 Following this, the GUI for Clusterize will be available at
-http://localhost:3000/home.html. Enjoy!
+http://localhost:3000. Enjoy!
