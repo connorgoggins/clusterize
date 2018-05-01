@@ -23,7 +23,8 @@ Then, install Python using the following command:
 
     brew install python@2
 
-Now, we can install the requirements via pip, Python's package manager. Run the
+Now, we can install the requirements via pip, Python's package manager. After
+cloning the project from Github, navigate to the project directory and run the
 following command:
 
     pip install -r requirements.txt
